@@ -1,0 +1,31 @@
+{
+  "name": "pilgrimsamachar",
+  "version": "0.1.0",
+  "description": "One place to find information related to pilgrim places",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spoddutu/Auth-JWT.git"
+  },
+  "keywords": [
+    "pilgrim"
+  ],
+  "author": "Santhosh P",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spoddutu/Auth-JWT/issues"
+  },
+  "homepage": "https://github.com/spoddutu/Auth-JWT#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "bower": "^1.6.5",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.3",
+    "jshint-stylish": "^2.1.0"
+  }
+}

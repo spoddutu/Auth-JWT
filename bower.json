@@ -1,0 +1,38 @@
+{
+  "name": "pilgrimsamachar",
+  "description": "One place to find information related to pilgrim places",
+  "main": "index.js",
+  "authors": [
+    "Santhosh P"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "pilgrim"
+  ],
+  "homepage": "https://github.com/spoddutu/Auth-JWT",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "angular": "~1.4.8",
+    "components-font-awesome": "~4.4.0"
+  },
+  "install": {
+    "path": "public/vendor",
+    "sources": {
+      "jquery": "vendor/jquery/dist/jquery.min.js",
+      "bootstrap": [
+        "vendor/bootstrap/dist/css/bootstrap.min.css",
+        "vendor/bootstrap/dist/js/bootstrap.min.js"
+      ],
+      "angular": "vendor/angular/angular.min.js",
+      "components-font-awesome": "vendor/components-font-awesome/css/font-awesome.min.css"
+    }
+  }
+}
