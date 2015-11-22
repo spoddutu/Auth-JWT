@@ -7,10 +7,10 @@ module.exports = {
 			if(err){
 				return callback({errorCode: 100, message: "Invalid email !"});
 			}
-			return callback({errorCode: undeifned, user: response});
+			return callback({errorCode: undefined, user: response});
 		});
 	},
-	validatePassword: function(user, hash){
-		return bcrypt.compareSync(user.password, hash);
+	validatePassword: function(password, hash){
+		return bcrypt.compareSync(password, hash);
 	}
 };

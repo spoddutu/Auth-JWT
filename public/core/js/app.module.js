@@ -8,8 +8,10 @@ function($urlRouterProvider, $stateProvider){
 		.state("home",{
 			url: "/home",
 			templateUrl: "core/templates/content.html",
-			controller: function($state){
-				$state.go("home.login");
+			controller: function($rootScope, $state){
+				if(!$rootScope.user){
+					$state.go("home.login");
+				}
 			}
 		})
 		.state("home.login",{
