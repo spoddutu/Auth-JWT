@@ -1,27 +1,20 @@
 <nav class="navbar navbar-default" ng-controller="header.ctrl as navCtrl">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#pilgrim-header" aria-expanded="false">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#createpage-header" aria-expanded="false">
 				<span class="sr-only">Toggle Navigation</span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#/home">Pilgrim</a>
+			<a class="navbar-brand" href="#/home">Create pAge</a>
 		</div>
-		<div class="collapse navbar-collapse" id="pilgrim-header">
-			<form class="navbar-form navbar-left" role="search" ng-controller="search.ctrl">
-				<div class="form-group">
-					<input type="text" class="form-control" ng-model="searchPlace" placeholder="Search pilgrim place" google-pilgrims/>
-				</div>
-				<div class="form-group">
-					<button type="submit" class="btn btn-default">Submit</button>
-				</div>
-			</form>
+		<div class="collapse navbar-collapse" id="createpage-header">
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#/about" class="fa fa-about">About</a></li>
 				<li><a href="#/contact" class="fa fa-contact">Contact</a></li>
-				<li class="dropdown">
+				<li><a href="#/login" class="fa fa-contact">Login</a></li>
+				<li class="dropdown" ng-hide="true">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 					{{navCtrl.displayname}} 
 					<span class="caret"></span></a>

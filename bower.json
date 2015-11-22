@@ -21,7 +21,8 @@
   "dependencies": {
     "bootstrap": "~3.3.5",
     "angular": "~1.4.8",
-    "components-font-awesome": "~4.4.0"
+    "components-font-awesome": "~4.4.0",
+    "angular-ui-router": "~0.2.15"
   },
   "install": {
     "path": "public/vendor",
@@ -32,7 +33,8 @@
         "vendor/bootstrap/dist/js/bootstrap.min.js"
       ],
       "angular": "vendor/angular/angular.min.js",
-      "components-font-awesome": "vendor/components-font-awesome/css/font-awesome.min.css"
+      "angular-ui-router": "vendor/angular-ui-router/release/angular-ui-router.min.js",
+      "components-font-awesome": ["vendor/components-font-awesome/css/font-awesome.min.css", "vendor/components-font-awesome/fonts/*.*"]
     }
   }
 }
