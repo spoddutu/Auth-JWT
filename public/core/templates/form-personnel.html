@@ -1,0 +1,62 @@
+<div class="row">
+	<div class="col-md-4">
+		<div class="form-group">
+		    <label for="name">First Name</label>
+		    <input type="text" class="form-control" name="name" ng-model="formData.firstname">
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="form-group">
+		    <label for="name">Middle Name</label>
+		    <input type="text" class="form-control" name="name" ng-model="formData.middlename">
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="form-group">
+		    <label for="name">Last Name</label>
+		    <input type="text" class="form-control" name="name" ng-model="formData.lastname">
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-3">
+		<label>Gender : </label>
+		<label class="radio-inline">
+			<input type="radio" name="gender" value="M" checked="checked"> Male
+		</label>
+		<label class="radio-inline">
+			<input type="radio" name="gender" value="F"> Female
+		</label>	
+	</div>
+	<div class="col-md-3">
+		<label>DoB : </label>
+		<label class="date-inline">
+			<input type="date" class="form-control" ng-model="formData.dob">
+		</label>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-9">
+		<autocomplete-address> </autocomplete-address>
+	</div>
+	<div class="col-md-3">
+		<div class="container-fluid">
+			<ng-camera ng-model="formData.profilePic"></ng-camera>
+		</div>
+	</div>
+</div>
+
+<div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" class="form-control" name="email" ng-model="formData.email">
+</div>
+
+<div class="form-group row">
+	<div class="col-xs-6 col-xs-offset-3">
+	    <a ui-sref="form.profession" class="btn btn-block btn-info">
+	    Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+	    </a>
+	</div>
+</div>

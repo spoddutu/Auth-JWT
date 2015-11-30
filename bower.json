@@ -22,19 +22,31 @@
     "bootstrap": "~3.3.5",
     "angular": "~1.4.8",
     "components-font-awesome": "~4.4.0",
-    "angular-ui-router": "~0.2.15"
+    "angular-ui-router": "~0.2.15",
+    "webcamjs": "~1.0.5"
   },
   "install": {
-    "path": "public/vendor",
+    "path": {
+      "js": "public/vendor",
+      "css": "public/vendor",
+      "ttf": "public/vendor/fonts",
+      "woff": "public/vendor/fonts",
+      "woff2": "public/vendor/fonts"
+    },
     "sources": {
       "jquery": "vendor/jquery/dist/jquery.min.js",
       "bootstrap": [
         "vendor/bootstrap/dist/css/bootstrap.min.css",
-        "vendor/bootstrap/dist/js/bootstrap.min.js"
+        "vendor/bootstrap/dist/js/bootstrap.min.js",
+        "vendor/bootstrap/dist/fonts/*.*"
       ],
       "angular": "vendor/angular/angular.min.js",
       "angular-ui-router": "vendor/angular-ui-router/release/angular-ui-router.min.js",
-      "components-font-awesome": ["vendor/components-font-awesome/css/font-awesome.min.css", "vendor/components-font-awesome/fonts/*.*"]
+      "components-font-awesome": [
+        "vendor/components-font-awesome/css/font-awesome.min.css",
+        "vendor/components-font-awesome/fonts/*.*"
+      ],
+      "webcamjs": ["vendor/webcamjs/webcam.min.js", "vendor/webcamjs/webcam.swf"]
     }
   }
 }

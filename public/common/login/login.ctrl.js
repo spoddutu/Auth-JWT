@@ -1,5 +1,5 @@
 angular.module("common.login.module",[])
-.controller("common.login.module.loginCtrl", ["$http", "$state", "$rootScope", function($http, $state, $rootScope){
+.controller("common.login.module.loginCtrl", ["$http", "$state", "$rootScope", "util", function($http, $state, $rootScope, util){
 	this.login = function(user){
 		$http.post("/login", user)
 		.success(function(response){
@@ -10,8 +10,9 @@ angular.module("common.login.module",[])
 			else{
 				$rootScope.message = undefined;
 				$rootScope.user = response.user;
+				util.setToken(response.token);
 				console.log(response);
-				$state.go("home");
+				$state.go("profile");
 			}
 		});
 	}

@@ -1,0 +1,72 @@
+<div class="row">
+	<div class="col-md-12">
+		<div class="form-group">
+			<input type="text" class="form-control" id="autocomplete" placeholder="Enter your address" ng-focus="geolocate()"/>
+		</div>
+		<div class="containerfluid">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="form-group">
+						<label class="align-right">Street address</label>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="formData.street_number" id="street_number" />
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="formData.route" id="route" />
+					</div>
+				</div>
+			</div>
+			<div class="row">				
+				<div class="col-md-3">
+					<div class="form-group">
+						<label class="align-right">City</label>
+					</div>
+				</div>
+				<div class="col-md-9">
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="formData.locality" id="locality" />
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="form-group">
+						<label class="align-right">State</label>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="formData.state" id="administrative_area_level_1" />
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<label class="align-right">Zip Code</label>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="formData.postal_code" id="postal_code" />
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="form-group">
+						<label class="align-right">Country</label>
+					</div>
+				</div>
+				<div class="col-md-9">
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="formData.country" id="country" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
