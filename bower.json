@@ -23,7 +23,8 @@
     "angular": "~1.4.8",
     "components-font-awesome": "~4.4.0",
     "angular-ui-router": "~0.2.15",
-    "webcamjs": "~1.0.5"
+    "webcamjs": "~1.0.5",
+    "angular-local-storage": "~0.2.3"
   },
   "install": {
     "path": {
@@ -43,10 +44,13 @@
       "angular": "vendor/angular/angular.min.js",
       "angular-ui-router": "vendor/angular-ui-router/release/angular-ui-router.min.js",
       "components-font-awesome": [
-        "vendor/components-font-awesome/css/font-awesome.min.css",
-        "vendor/components-font-awesome/fonts/*.*"
+        "vendor/components-font-awesome/css/font-awesome.min.css"
       ],
-      "webcamjs": ["vendor/webcamjs/webcam.min.js", "vendor/webcamjs/webcam.swf"]
+      "webcamjs": [
+        "vendor/webcamjs/webcam.min.js",
+        "vendor/webcamjs/webcam.swf"
+      ],
+      "angular-local-storage": "vendor/angular-local-storage/dist/angular-local-storage.min.js"
     }
   }
 }

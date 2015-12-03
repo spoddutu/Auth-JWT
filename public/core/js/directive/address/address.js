@@ -4,6 +4,14 @@ angular.module("core.directive.address", [])
 		restrict : "E",
 		templateUrl: "core/js/directive/address/autocomplete-address.html",
 		replace: true,
+		scope: {
+			street_number: "=street",
+			route:"=",
+			locality:"=",
+			administrative_area_level_1:"=state",
+			country: "=",
+			postal_code: "=postalCode",
+		},
 		controller: ["$scope", function($scope){
 			var componentForm = {
 			  street_number: 'short_name',
@@ -30,7 +38,7 @@ angular.module("core.directive.address", [])
 				    var addressType = place.address_components[i].types[0];
 				    if (componentForm[addressType]) {
 				      var val = place.address_components[i][componentForm[addressType]];
-				      document.getElementById(addressType).value = val;
+				      $scope[addressType] = val;
 				    }
 				}
 			};

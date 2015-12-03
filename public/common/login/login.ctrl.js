@@ -10,7 +10,7 @@ angular.module("common.login.module",[])
 			else{
 				$rootScope.message = undefined;
 				$rootScope.user = response.user;
-				util.setToken(response.token);
+				util.set("token", response.token);
 				console.log(response);
 				$state.go("profile");
 			}

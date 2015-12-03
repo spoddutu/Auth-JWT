@@ -1,14 +1,19 @@
 var app = angular.module("createpage.core.module", 
-	["ui.router", 
+	["ui.router",
+	"LocalStorageModule",
 	"common.login.module", 
-	"common.register.module", 
+	"common.register.module",
+	"common.spinner", 
 	"core.profile.forms", 
 	"core.directive.address", 
 	"core.directive.camera",
 	"core.service"]);
 
-app.config(['$urlRouterProvider', '$stateProvider',
-function($urlRouterProvider, $stateProvider){
+app.config(['$urlRouterProvider', '$stateProvider', 'localStorageServiceProvider',
+function($urlRouterProvider, $stateProvider, localStorageServiceProvider){
+	localStorageServiceProvider.setPrefix("createpage");
+	localStorageServiceProvider.setStorageType("localStorage");
+
 	$urlRouterProvider.otherwise("/home");
 
 	$stateProvider
@@ -32,14 +37,22 @@ function($urlRouterProvider, $stateProvider){
 		.state("profile",{
 			url: "/profile",
 			templateUrl: "core/templates/form-profile.html",
-			controller: "profileCtrl",
 			resolve: {
-				validToken: validateToken
-			}
+				isValidToken: validateToken
+			},
+			controller: "profileCtrl"
 		})
 		.state("profile.personnel",{
 			url: "/personnel",
 			templateUrl: "core/templates/form-personnel.html"
+		})
+		.state("profile.profession",{
+			url: "/profession",
+			templateUrl: "core/templates/form-profession.html"
+		})
+		.state("profile.education",{
+			url: "/education",
+			templateUrl: "core/templates/form-education.html"
 		})
 		.state("about",{
 			url: "/about",
@@ -52,19 +65,24 @@ function($urlRouterProvider, $stateProvider){
 }]);
 
 this.validateToken = function($q, $rootScope, $state, util){
-	var defer = $q.defer();
-	var token = util.getToken();
-	if(token){
-		defer.resolve(token);
-	}
-	else{
-		defer.reject();
-		$rootScope.message = "Please login...!"
-		$rootScope.errorCode = 105;
-		$rootScope.user = undefined;
+
+	var promise = function(){
+		var defer = $q.defer();
+		var token = util.get("token");
+		if(token){
+			defer.resolve(token);
+		}
+		else{
+			defer.reject();
+		}
+		return defer.promise;
+	};
+	promise().then(function(response){
+		console.log("success");
+	}, function(){
+		$rootScope.message = "Invalid token, Please login!"
 		$state.go("home");
-	}
-	return defer.promise;
+	});
 };
 
 app.controller("header.ctrl", [function(){

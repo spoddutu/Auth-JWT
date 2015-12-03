@@ -1,0 +1,56 @@
+<div class="row">
+	<div class="col-md-4">
+		<div class="form-group">
+			<label for="jobTitle">Job Title</label>
+			<input type="text" class="form-control" ng-model="formData.jobTitle" placeholder="Enter Job Title"/>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="form-group">
+			<label for="company">Company</label>
+			<input type="text" class="form-control" ng-model="formData.currentCompany" placeholder="Enter present company name"/>			
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-2">
+		<div class="form-group">
+			<label for="experience">Experience</label>
+		</div>
+	</div>
+	<div class="col-md-2">
+		<div class="form-group">
+			<label for="years">Years</label>
+			<spinner default="0" max="25" min="0" interval="1" value="formData.years"></spinner>
+		</div>
+	</div>
+	<div class="col-md-2">
+		<div class="form-group">
+			<label for="months">Months</label>
+			<spinner default="0" max="11" min="0" interval="1" value="formData.months"></spinner>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-8">
+		<autocomplete-address 
+			street="formData.office1.street_number"
+			route="formData.office1.route"
+			locality="formData.office1.locality"
+			state="formData.office1.administrative_area_level_1"
+			postalCode="formData.office1.postal_code"
+			country="formData.office1.country"> </autocomplete-address>
+	</div>	
+</div>
+<div class="form-group row">
+	<div class="col-md-2 col-md-offset-8">
+	    <a ui-sref="profile.personnel" class="btn btn-block btn-info">
+	    Prvious Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+	    </a>
+	</div>
+	<div class="col-md-2">
+	    <a ui-sref="profile.education" class="btn btn-block btn-info">
+	    Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+	    </a>
+	</div>
+</div>

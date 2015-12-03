@@ -23,10 +23,10 @@
 	<div class="col-md-3">
 		<label>Gender : </label>
 		<label class="radio-inline">
-			<input type="radio" name="gender" value="M" checked="checked"> Male
+			<input type="radio" name="gender" value="M" ng-checked="true" ng-model="formData.gender"> Male
 		</label>
 		<label class="radio-inline">
-			<input type="radio" name="gender" value="F"> Female
+			<input type="radio" name="gender" value="F" ng-model="formData.gender"> Female
 		</label>	
 	</div>
 	<div class="col-md-3">
@@ -39,7 +39,13 @@
 
 <div class="row">
 	<div class="col-md-9">
-		<autocomplete-address> </autocomplete-address>
+		<autocomplete-address 
+			street="formData.personnel.street_number"
+			route="formData.personnel.route"
+			locality="formData.personnel.locality"
+			state="formData.personnel.administrative_area_level_1"
+			postalCode="formData.personnel.postal_code"
+			country="formData.personnel.country"> </autocomplete-address>
 	</div>
 	<div class="col-md-3">
 		<div class="container-fluid">
@@ -54,8 +60,8 @@
 </div>
 
 <div class="form-group row">
-	<div class="col-xs-6 col-xs-offset-3">
-	    <a ui-sref="form.profession" class="btn btn-block btn-info">
+	<div class="col-md-2 col-md-offset-10">
+	    <a ui-sref="profile.profession" class="btn btn-block btn-info">
 	    Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
 	    </a>
 	</div>

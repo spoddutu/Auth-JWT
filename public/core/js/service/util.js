@@ -1,12 +1,11 @@
 angular.module("core.service", [])
-.service("util", function(){
-	var authToken = undefined;
+.service("util", ["localStorageService", function(localStorageService){
 
-	this.setToken = function(token){
-		authToken = token;
+	this.set = function(key, value){
+		localStorageService.set(key, value);
 	};
 
-	this.getToken = function(){
-		return authToken;
+	this.get = function(key){
+		return localStorageService.get(key);
 	};
-});
+}]);
